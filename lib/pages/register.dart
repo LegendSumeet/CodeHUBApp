@@ -48,10 +48,9 @@ bool isPhoneNoValid(String? phoneNo) {
   
   @override
   Widget build(BuildContext context) {
-    return Material
-    (
+    return MaterialApp(
       color: Colors.white,
-      child: Form(
+      home: Form(
         key: fromkey,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
