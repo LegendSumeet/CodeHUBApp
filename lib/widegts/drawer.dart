@@ -1,5 +1,9 @@
+import "package:codehub/pages/register.dart";
 import "package:flutter/cupertino.dart";
 import "package:flutter/material.dart";
+import "package:get/get.dart";
+import "package:google_sign_in/google_sign_in.dart";
+import "../utils/logincontrol.dart";
 
 class Mydrawer extends StatefulWidget {
   const Mydrawer({super.key});
@@ -11,35 +15,31 @@ class Mydrawer extends StatefulWidget {
 class _MydrawerState extends State<Mydrawer> {
   @override
   Widget build(BuildContext context) {
-    final url =
-        "https://res.cloudinary.com/practicaldev/image/fetch/s--kf7OGsr1--/c_fill,f_auto,fl_progressive,h_320,q_auto,w_320/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/675165/f50cce0a-84e5-407e-b992-4d98b02a023f.jpeg";
     return Drawer(
-      
       child: Container(
-        
-        
         color: Colors.blueAccent,
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
             DrawerHeader(
-              
               padding: EdgeInsets.zero,
               child: UserAccountsDrawerHeader(
-              decoration: BoxDecoration(color: Colors.blueAccent),
+                decoration: BoxDecoration(color: Colors.blueAccent),
                 margin: EdgeInsets.zero,
-                accountEmail: const Text("sumeet@gmail.com",
-                style: TextStyle(color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.bold)
-                ),
-                accountName: const Text("sumeet",
-                style: TextStyle(color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.bold)
-                ),
+                accountEmail: Text(Controller.googleaccount.value!.email ?? '',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold)),
+                accountName: Text(
+                    Controller.googleaccount.value?.displayName ?? '',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold)),
                 currentAccountPicture: CircleAvatar(
-                  backgroundImage: NetworkImage(url),
+                  backgroundImage:
+                      NetworkImage(Controller.googleaccount.value?.photoUrl??''),
                 ),
               ),
             ),
@@ -49,7 +49,7 @@ class _MydrawerState extends State<Mydrawer> {
                 color: Colors.white,
               ),
               title: Text(
-                "Home",
+                '',
                 textScaleFactor: 1.3,
                 style: TextStyle(color: Colors.white),
               ),

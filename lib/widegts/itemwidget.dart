@@ -10,18 +10,22 @@ class ItemWidget extends StatelessWidget {
   const ItemWidget({super.key, required this.cour}) :assert(cour != null);
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: Image.asset(cour.image),
-      title: Text(cour.name),
-      subtitle: Text(cour.description),
-      trailing: ElevatedButton(
-        onPressed: () {},
-        child: const Text("View"),
-        style: TextButton.styleFrom(
-          backgroundColor: Colors.blue,
+    return Card(
+      shadowColor: Colors.black,
+      elevation: 10.0,
+      child: ListTile(
+        leading: Image.network(cour.image),
+        title: Text(cour.name),
+        subtitle: Text(cour.description),
+        trailing: ElevatedButton(
+          onPressed: (){cour.link;},
+          style: TextButton.styleFrom(
+            backgroundColor: Colors.red,
+            
+          ),
+          child: const Text("View"),
         ),
       ),
     );
-     
   }
 }

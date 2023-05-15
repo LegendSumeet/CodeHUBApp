@@ -1,14 +1,16 @@
-import 'dart:html';
+import 'dart:convert';
 
 import 'package:codehub/courses/info.dart';
+import 'package:codehub/pages/register.dart';
 import 'package:codehub/widegts/drawer.dart';
 import 'package:codehub/widegts/itemwidget.dart';
 import 'package:flutter/material.dart';
 import 'package:codehub/main.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/services.dart';
 import 'package:codehub/utils/routes.dart';
 import 'package:codehub/utils/constants.dart';
-
+import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class homepage extends StatefulWidget {
   const homepage({super.key});
@@ -19,85 +21,54 @@ class homepage extends StatefulWidget {
 
 class _homepageState extends State<homepage> {
   @override
+  void initState() {
+    super.initState();
+    loaddate();
+  }
+
+  loaddate() async {
+    var couresjson = await rootBundle.loadString("assets/files/courses.json");
+    var decode = jsonDecode(couresjson);
+    var product = decode["avail"];
+    Coures.itemsco =
+        List.from(product).map<Info>((info) => Info.fromJson(info)).toList();
+
+    setState(() {});
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-     
-    
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.only(top: 20.0, left: 20.0),
-          child: Column(
-            children: [
-              Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Container(
-                      child: const Text(
-                        "Hello , Sumeet",
-                        style: kHeadingextStyle,
-                      ),
-                    )
-                  ]),
-              Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Container(
-                      child: const Text(
-                        "Welcome to CodeHub",
-                        style: kSubheadingextStyle,
-                      ),
-                    )
-                  ]),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    hintText: "Search",
-                    fillColor: Colors.grey[200],
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                    
-                    suffixIcon: const Icon(Icons.search),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              const Text(
-                "Courses",
-                style: kHeadingextStyle,
-                textAlign: TextAlign.left,
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Container(
-                child: ListView.builder(
-                itemCount: Coures.itemsco.length,
-                itemBuilder: (context, index){
-                  return ItemWidget(
-                    cour: Coures.itemsco[index],
-                  );
-                },
-              )
-              )
-            
-         
-            ],
+      appBar: AppBar(
+        title: Text(
+          Controller.googleaccount.value == null
+              ? "CodeHub"
+              : Controller.googleaccount.value!.displayName.toString(),
+          style: GoogleFonts.lato(
+            fontWeight: FontWeight.bold,
           ),
         ),
-            
+        actions: [
+          IconButton(
+            onPressed: () {
+              Controller.logout();
+              
+            },
+            icon: Icon(Icons.login),
           ),
-        
-      )
-    ;
+          IconButton(
+            onPressed: () {
+              Navigator.pushNamed(context, Myroutes.register);
+            },
+            icon: Icon(Icons.person_add),
+          ),
+        ],
+      ),
+
+      body: SafeArea(child: 
+      Text("Welcome to CodeHub",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+      ),
+      );
+    
   }
 }
-
