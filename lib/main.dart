@@ -11,6 +11,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:codehub/pages/splash.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 void main(List<String> args) async {
   WidgetsFlutterBinding.ensureInitialized();

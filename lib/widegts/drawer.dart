@@ -26,7 +26,7 @@ class _MydrawerState extends State<Mydrawer> {
               child: UserAccountsDrawerHeader(
                 decoration: BoxDecoration(color: Colors.blueAccent),
                 margin: EdgeInsets.zero,
-                accountEmail: Text(Controller.googleaccount.value!.email ?? '',
+                accountEmail: Text(Controller.googleaccount.value?.email ?? '',
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
@@ -39,7 +39,8 @@ class _MydrawerState extends State<Mydrawer> {
                         fontWeight: FontWeight.bold)),
                 currentAccountPicture: CircleAvatar(
                   backgroundImage:
-                      NetworkImage(Controller.googleaccount.value?.photoUrl??''),
+                      NetworkImage(Controller.googleaccount.value?.photoUrl ??
+                          "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngwing.com%2Fen%2Ffree-png-kgqjv&psig=AOvVaw0QZ2Z2Q4Z2QZ2Z2QZ2Z2QZ2&ust=1634177229122000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJjQ4Z2Z2_MCFQAAAAAdAAAAABAD"),
                 ),
               ),
             ),

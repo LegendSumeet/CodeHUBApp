@@ -1,16 +1,9 @@
 import 'dart:convert';
 
 import 'package:codehub/courses/info.dart';
-import 'package:codehub/pages/register.dart';
-import 'package:codehub/widegts/drawer.dart';
-import 'package:codehub/widegts/itemwidget.dart';
 import 'package:flutter/material.dart';
-import 'package:codehub/main.dart';
 import 'package:flutter/services.dart';
-import 'package:codehub/utils/routes.dart';
-import 'package:codehub/utils/constants.dart';
-import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class homepage extends StatefulWidget {
   const homepage({super.key});
@@ -39,36 +32,18 @@ class _homepageState extends State<homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          Controller.googleaccount.value == null
-              ? "CodeHub"
-              : Controller.googleaccount.value!.displayName.toString(),
-          style: GoogleFonts.lato(
-            fontWeight: FontWeight.bold,
-          ),
+        body: SafeArea(
+      child: Container(
+        padding: Vx.mH24,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            "Codehub".text.xl5.bold.color(Colors.black).make(),
+            "Learn to Code ".text.xl2.make(),
+          ],
         ),
-        actions: [
-          IconButton(
-            onPressed: () {
-              Controller.logout();
-              
-            },
-            icon: Icon(Icons.login),
-          ),
-          IconButton(
-            onPressed: () {
-              Navigator.pushNamed(context, Myroutes.register);
-            },
-            icon: Icon(Icons.person_add),
-          ),
-        ],
       ),
-
-      body: SafeArea(child: 
-      Text("Welcome to CodeHub",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
-      ),
-      );
-    
+    ));
   }
 }
