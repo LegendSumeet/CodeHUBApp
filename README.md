@@ -20,3 +20,6 @@ CodeHub is a powerful Flutter-based mobile application that provides a centraliz
 
 
 
+**Launching Soon!**
+
+Stay tuned for the official launch of CodeHub. We are excited to bring you a powerful and immersive learning experience for all your tech needs!
