@@ -1,58 +1,72 @@
-import 'package:codehub/utils/constants.dart';
+import 'package:codehub/courses/info.dart';
+import 'package:codehub/widegts/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:codehub/main.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:velocity_x/velocity_x.dart';
 
-import '../utils/routes.dart';
+class MyWidget extends StatelessWidget {
+  final Info coures;
 
-class deatils extends StatefulWidget {
-  const deatils({super.key});
-
-  @override
-  State<deatils> createState() => _deatilsState();
-}
-
-class _deatilsState extends State<deatils> {
+  const MyWidget({super.key, required this.coures});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        width: double.infinity,
-        decoration: BoxDecoration(
-            color: Color(0xFFF5F4EF),
-            image: DecorationImage(
-              image: AssetImage("assets/images/ux_big.png"),
-              alignment: Alignment.topRight,
-            )),
-            child: Padding(padding: EdgeInsets.only(left: 20, top: 50, right: 20),
-            child: Column(children: <Widget>[
-              Row(
-                children: [
-                  InkWell(
-                    onTap: () {
-                      Navigator.pushNamed(context, Myroutes.homeRoute);
-                    },
-                    child: Icon(Icons.arrow_back_ios),
-                  ),
-                  SizedBox(width: 20),
-                  Text("Back", style: GoogleFonts.robotoMono(fontSize: 20, fontWeight: FontWeight.w400),)
-                ],
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              Container(
+      appBar: AppBar(
+        
+          backgroundColor: Colors.transparent,
+          iconTheme: const IconThemeData(color: Colors.black),
+          
+          title: Text(
+            coures.name,
+            style: const TextStyle(color: Colors.black),
+          )),
+      bottomNavigationBar: ButtonBar(
+        children: [
+          ElevatedButton(
+            onPressed: () {},
+            child: "Start".text.make(),
+            style: ButtonStyle(
+                backgroundColor:
+                    MaterialStateProperty.all(Mytheme.darkbluishcolor),
+                shape: MaterialStateProperty.all(StadiumBorder())),
+          ).w40(context),
+        ],
+      ).p16(),
 
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Center(child: Text("JAVA", style: GoogleFonts.robotoMono(fontSize: 30, fontWeight: FontWeight.w400),)),
-                ),
-              )              
-              
-            ]),
-            
-            ))
-      );
-    
+      body: SafeArea(
+        
+        bottom: false,
+        child: Column(
+          children: [
+            Image.asset(coures.image).h32(context),
+            Expanded(
+              child: VxArc(
+                height: 30.0,
+                edge: VxEdge.TOP,
+                child: Container(
+                    color: Colors.white,
+                    width: context.screenWidth,
+                    child: Column(
+                      children: [
+                        coures.name.text
+                            .color(Mytheme.darkbluishcolor)
+                            .textStyle(context.captionStyle)
+                            .xl3
+                            .bold
+                            .center
+                            .make()
+                            .p16(),
+                        coures.description.text.center
+                            .color(Mytheme.darkbluishcolor)
+                            .textStyle(context.captionStyle)
+                            .xl
+                            .make(),
+                      ],
+                    )),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

@@ -4,8 +4,8 @@ class Coures{
     id: 1,
     name: "Flutter",
     description: "Flutter is an open-source UI software development kit created by Google. It is used to develop applications for Android, iOS, Linux, Mac, Windows, Google Fuchsia, and the web from a single codebase.",
-    image: "https://cdn.worldvectorlogo.com/logos/flutter-logo.svg",
-    link: "https://flutter.dev/", ),
+    image: "assets/images/ios.png",
+    link: "https://flutter.dev/" ),
   ];
 }
 

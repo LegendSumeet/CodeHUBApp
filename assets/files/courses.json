@@ -5,70 +5,70 @@
         "name": "Introduction to Python Programming",
         "image": "assets/images/python.png",
         "link": "https://example.com/courses/intro_cs",
-        "description": "Learn the fundamentals of computer science, including programming concepts, algorithms, and problem-solving."
+        "description": "Learn the fundamentals of computer science."
       },
       {
         "id": 2,
         "name": "Web Development Fundamentals",
         "image": "assets/images/web.jpg",
         "link": "https://example.com/courses/data_structures",
-        "description": "Explore different data structures and algorithms to efficiently store, retrieve, and manipulate data."
+        "description": "Explore different data structures and algorithms t."
       },
       {
         "id": 3,
         "name": "Introduction to Data Science with Python",
         "image": "assets/images/data-science.jpg",
         "link": "https://example.com/courses/machine_learning",
-        "description": "Discover the basics of machine learning, including supervised and unsupervised learning techniques."
+        "description": "Discover the basics of machine learning."
       },
       {
         "id": 4,
         "name": "Full-Stack Web Development",
         "image": "assets/images/full-stack-web-development.jpg",
         "link": "https://example.com/courses/web_development",
-        "description": "Build responsive websites using HTML and CSS, and learn essential web development concepts."
+        "description": "Build responsive websites using HTML and CSS."
       },
       {
         "id": 5,
         "name": "Machine Learning Essentials",
         "image": "assets/images/ml.jpg",
         "link": "https://example.com/courses/intro_psychology",
-        "description": "Gain a foundational understanding of psychology, including its major theories and research methods."
+        "description": "Gain a foundational understanding of psychology."
       },
       {
         "id": 6,
         "name": "Cybersecurity Essentials",
         "image": "assets/images/cyber.jpg",
         "link": "https://example.com/courses/intro_psychology",
-        "description": "Gain a foundational understanding of psychology, including its major theories and research methods."
+        "description": "Gain a foundational understanding of psychology."
       },
       {
         "id": 7,
         "name": "Android App Development",
         "image": "assets/images/android.png",
         "link": "https://example.com/courses/intro_psychology",
-        "description": "Gain a foundational understanding of psychology, including its major theories and research methods."
+        "description": "Gain a foundational understanding of psychology."
       },
       {
         "id": 8,
         "name": "iOS App Development",
         "image": "assets/images/ios.png",
         "link": "https://example.com/courses/intro_psychology",
-        "description": "Gain a foundational understanding of psychology, including its major theories and research methods."
+        "description": "Gain a foundational understanding of psychology."
       },
       {
         "id": 9,
         "name": "Introduction to Cloud Computing with AWS",
         "image": "assets/images/aws-header-tvmeuf2width-800.png",
         "link": "https://example.com/courses/intro_psychology",
-        "description": "Gain a foundational understanding of psychology, including its major theories and research methods."
+        "description": "Gain a foundational understanding of psychology."
       },
       {
         "id": 10,
         "name": "Artificial Intelligence Essentials",
         "image": "assets/images/ai.png",
         "link": "https://example.com/courses/intro_psychology",
-        "description": "Gain a foundational understanding of psychology, including its major theories and research methods."
+        "description": "Gain a foundational understanding of psychology."
       }
     ]
   }
