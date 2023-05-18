@@ -1,16 +1,22 @@
-# codehub
+# CodeHub
 
-A new Flutter project.
+CodeHub is a powerful Flutter-based mobile application that provides a centralized platform for accessing YouTube tech courses, tech bootcamps, internship information, and personalized roadmaps. It offers a seamless learning experience for tech enthusiasts, whether they are beginners starting their coding journey or experienced developers looking to expand their knowledge.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- **YouTube Tech Courses**: Access a wide range of high-quality tech courses from various YouTube channels, all conveniently aggregated in one platform.
+- **Tech Bootcamps**: Explore a comprehensive directory of tech bootcamps, enabling users to discover structured learning programs for accelerated skill development.
+- **Internship Information**: Stay up-to-date with the latest tech internship opportunities, providing valuable hands-on experiences for career growth.
+- **Personalized Roadmaps**: Customized roadmaps catered to users' skill levels and interests, guiding them through their learning journey with recommended courses and milestones.
+- **Authentication and Progress Tracking**: Create a personalized account to track your learning progress, bookmark courses, and easily resume from where you left off.
 
-A few resources to get you started if this is your first Flutter project:
+## Tech Stack
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Flutter: Cross-platform framework for developing mobile applications.
+- Dart: Programming language used for implementing the app's logic and functionality.
+- Firebase: Integration with Firebase services, including Firebase Authentication for user authentication and Firebase Firestore for data storage and retrieval.
+- YouTube Data API: Seamless integration with the YouTube Data API to fetch and curate the latest tech courses.
+- Additional Packages: Dependencies used for state management, navigation, UI design, and other essential functionalities.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
