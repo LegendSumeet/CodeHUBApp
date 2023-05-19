@@ -11,10 +11,8 @@ class MyWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        
           backgroundColor: Colors.transparent,
           iconTheme: const IconThemeData(color: Colors.black),
-          
           title: Text(
             coures.name,
             style: const TextStyle(color: Colors.black),
@@ -31,9 +29,7 @@ class MyWidget extends StatelessWidget {
           ).w40(context),
         ],
       ).p16(),
-
       body: SafeArea(
-        
         bottom: false,
         child: Column(
           children: [

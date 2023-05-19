@@ -5,9 +5,6 @@ import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
 import 'package:flutter/material.dart';
 
-
-
-
 /// // ...
 
 /// ```
@@ -64,7 +61,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '631248749521',
     projectId: 'codehub-bc560',
     storageBucket: 'codehub-bc560.appspot.com',
-    iosClientId: '631248749521-uikn093lep2fkq1eh17j5r875k1an0h5.apps.googleusercontent.com',
+    iosClientId:
+        '631248749521-uikn093lep2fkq1eh17j5r875k1an0h5.apps.googleusercontent.com',
     iosBundleId: 'com.example.codehub',
   );
 
@@ -74,7 +72,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '631248749521',
     projectId: 'codehub-bc560',
     storageBucket: 'codehub-bc560.appspot.com',
-    iosClientId: '631248749521-uikn093lep2fkq1eh17j5r875k1an0h5.apps.googleusercontent.com',
+    iosClientId:
+        '631248749521-uikn093lep2fkq1eh17j5r875k1an0h5.apps.googleusercontent.com',
     iosBundleId: 'com.example.codehub',
   );
 }

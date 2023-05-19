@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:codehub/courses/info.dart';
-import 'package:codehub/pages/details.dart';
+import 'package:codehub/pages/home/details.dart';
 import 'package:codehub/widegts/drawer.dart';
 import 'package:codehub/widegts/theme.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -60,15 +60,15 @@ class _HomepageState extends State<Homepage> {
 
   AppBar appbar() {
     return AppBar(
-        backgroundColor: Mytheme.creamcolor,
-        actions: [
-          IconButton(
-              onPressed: () {
-                FirebaseAuth.instance.signOut();
-              },
-              icon: Icon(Icons.logout))
-        ],
-      );
+      backgroundColor: Mytheme.creamcolor,
+      actions: [
+        IconButton(
+            onPressed: () {
+              FirebaseAuth.instance.signOut();
+            },
+            icon: Icon(Icons.logout))
+      ],
+    );
   }
 }
 
@@ -76,7 +76,6 @@ class header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-    
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         "Courses".text.xl5.bold.color(Mytheme.darkbluishcolor).make(),

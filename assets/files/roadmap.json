@@ -1,0 +1,76 @@
+{
+  "roadmaps": [
+    {
+      "id": 1,
+      "name": "JAVA",
+      "description": "Step by step guide to becoming a Java developer in 2023.",
+      "image": "assets/images/ai.jpg",
+      "file": "assets/roadmaps/ai.json"
+    },
+    {
+      "id": 2,
+      "name": "Blockchain",
+      "description": "Discover the fundamentals of Blockchain technology and its potential in various industries.",
+      "image": "assets/images/blockchain.jpg",
+      "file": "assets/roadmaps/ai.json"
+    },
+    {
+      "id": 3,
+      "name": "Internet of Things (IoT)",
+      "description": "Learn about IoT devices and connectivity for building smart applications.",
+      "image": "assets/images/iot.jpg",
+      "file": "assets/roadmaps/ai.json"
+    },
+    {
+      "id": 4,
+      "name": "Augmented Reality (AR)",
+      "description": "Explore the world of Augmented Reality and create interactive AR experiences.",
+      "image": "assets/images/ar.jpg",
+      "file": "assets/roadmaps/ai.json"
+    },
+    {
+      "id": 5,
+      "name": "Cloud Computing",
+      "description": "Understand cloud infrastructure and services for scalable and reliable applications.",
+      "image": "assets/images/cloud.jpg",
+      "file": "assets/roadmaps/ai.json"
+    },
+    {
+      "id": 6,
+      "name": "Data Science",
+      "description": "Learn about data analysis, machine learning, and data visualization techniques.",
+      "image": "assets/images/data-science.jpg",
+      "file": "assets/roadmaps/ai.json"
+
+    },
+    {
+      "id": 7,
+      "name": "Cybersecurity",
+      "description": "Explore the world of cybersecurity and learn about protecting systems and data.",
+      "image": "assets/images/cybersecurity.jpg",
+      "file": "assets/roadmaps/ai.json"
+
+    },
+    {
+      "id": 8,
+      "name": "Mobile App Development",
+      "description": "Learn to build native and cross-platform mobile applications for iOS and Android.",
+      "image": "assets/images/mobile-app-development.jpg",
+      "file": "assets/roadmaps/ai.json"
+    },
+    {
+      "id": 9,
+      "name": "Web Development",
+      "description": "Master front-end and back-end web development technologies and frameworks.",
+      "image": "assets/images/web-development.jpg",
+      "file": "assets/roadmaps/ai.json"
+    },
+    {
+      "id": 10,
+      "name": "Machine Learning",
+      "description": "Explore the concepts and algorithms of Machine Learning for predictive modeling.",
+      "image": "assets/images/machine-learning.jpg",
+      "file": "assets/roadmaps/ai.json"
+    }
+  ]
+}

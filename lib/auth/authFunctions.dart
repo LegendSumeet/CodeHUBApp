@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 import 'firebaseFunctions.dart';
 
-
 class AuthServices {
   static signupUser(
       String email, String password, String name, BuildContext context) async {

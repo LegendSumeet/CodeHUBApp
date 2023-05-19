@@ -1,11 +1,12 @@
-class Coures{
-  static List<Info> itemsco =[
-  Info(
-    id: 1,
-    name: "Flutter",
-    description: "Flutter is an open-source UI software development kit created by Google. It is used to develop applications for Android, iOS, Linux, Mac, Windows, Google Fuchsia, and the web from a single codebase.",
-    image: "assets/images/ios.png",
-    link: "https://flutter.dev/" ),
+class Coures {
+  static List<Info> itemsco = [
+    Info(
+        id: 1,
+        name: "Flutter",
+        description:
+            "Flutter is an open-source UI software development kit created by Google. It is used to develop applications for Android, iOS, Linux, Mac, Windows, Google Fuchsia, and the web from a single codebase.",
+        image: "assets/images/ios.png",
+        link: "https://flutter.dev/"),
   ];
 }
 
@@ -23,8 +24,8 @@ class Info {
     required this.image,
     required this.link,
   });
- 
- factory Info.fromJson(Map<String, dynamic> json) {
+
+  factory Info.fromJson(Map<String, dynamic> json) {
     return Info(
       id: json['id'],
       name: json['name'],
@@ -41,5 +42,4 @@ class Info {
         "image": image,
         "link": link,
       };
-
 }

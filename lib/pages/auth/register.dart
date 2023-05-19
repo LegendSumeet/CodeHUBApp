@@ -1,7 +1,7 @@
 import 'package:codehub/widegts/theme.dart';
 import 'package:flutter/material.dart';
 
-import '../auth/authFunctions.dart';
+import '../../auth/authFunctions.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({super.key});
