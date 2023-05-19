@@ -1,6 +1,9 @@
 # CodeHub
+![Clean Modern App Portfolio Mockup Presentation](https://github.com/LegendSumeet/codehub-app/assets/85386116/34f80f4c-d8d4-43f5-8261-74c4f96f87de)
+
 
 CodeHub is a powerful Flutter-based mobile application that provides a centralized platform for accessing YouTube tech courses, tech bootcamps, internship information, and personalized roadmaps. It offers a seamless learning experience for tech enthusiasts, whether they are beginners starting their coding journey or experienced developers looking to expand their knowledge.
+
 
 ## Features
 
