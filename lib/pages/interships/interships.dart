@@ -1,7 +1,5 @@
 import 'package:codehub/widegts/drawer.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import '../../widegts/theme.dart';
@@ -18,10 +16,10 @@ class _IntershipsState extends State<Interships> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: MyDrawer(),
+      drawer: const MyDrawer(),
       appBar: AppBar(
         backgroundColor: Mytheme.creamcolor,
-        iconTheme: IconThemeData(color: Colors.black),
+        iconTheme: const IconThemeData(color: Colors.black),
       ),
       body: Center(
         child: Container(
@@ -32,7 +30,7 @@ class _IntershipsState extends State<Interships> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                header(),
+                const header(),
                 Center(
                   child: const CircularProgressIndicator().py16(),
                 ),
@@ -46,6 +44,8 @@ class _IntershipsState extends State<Interships> {
 }
 
 class header extends StatelessWidget {
+  const header({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(

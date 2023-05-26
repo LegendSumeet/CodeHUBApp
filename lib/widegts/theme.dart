@@ -21,8 +21,12 @@ class Mytheme {
         iconTheme: IconThemeData(color: Colors.white),
       ));
 
-  static Color creamcolor = Color(0xfff5f5f5);
-  static Color darkbluishcolor = Color(0xff403b58);
+  static Color creamcolor = const Color(0xfff5f5f5);
+  static Color darkbluishcolor = const Color(0xff403b58);
   static Color darkcreamcolor = Vx.gray900;
-  static Color darkbluecolor = Color(0x002B63D9);
+  static Color darkbluecolor = const Color(0x002B63D9);
+  static Color hello = const Color(0xFF0C023F);
+  static Color darkblue = const Color.fromRGBO(31, 31, 57, 1);
 }
+
+

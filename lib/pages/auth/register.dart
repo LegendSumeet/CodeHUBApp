@@ -26,21 +26,22 @@ class _LoginFormState extends State<LoginForm> {
         child: Form(
           key: _formKey,
           child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 50),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 50),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                
                 Image.asset(
                   "assets/images/register.jpg",
                   fit: BoxFit.cover,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Text(
                   login ? 'Login' : 'Register',
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                  style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(
                   height: 30,
@@ -48,9 +49,9 @@ class _LoginFormState extends State<LoginForm> {
                 login
                     ? Container()
                     : TextFormField(
-                        key: ValueKey('fullname'),
+                        key: const ValueKey('fullname'),
                         decoration: InputDecoration(
-                          label: Text('Full Name'),
+                          label: const Text('Full Name'),
                           hintText: 'Enter Full Name',
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10)),
@@ -72,9 +73,9 @@ class _LoginFormState extends State<LoginForm> {
                   height: 30,
                 ),
                 TextFormField(
-                  key: ValueKey('email'),
+                  key: const ValueKey('email'),
                   decoration: InputDecoration(
-                    label: Text('Email'),
+                    label: const Text('Email'),
                     hintText: 'Enter Email',
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10)),
@@ -96,10 +97,10 @@ class _LoginFormState extends State<LoginForm> {
                   height: 30,
                 ),
                 TextFormField(
-                  key: ValueKey('password'),
+                  key: const ValueKey('password'),
                   obscureText: true,
                   decoration: InputDecoration(
-                    label: Text('Password'),
+                    label: const Text('Password'),
                     hintText: 'Enter Password',
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10)),
@@ -117,10 +118,10 @@ class _LoginFormState extends State<LoginForm> {
                     });
                   },
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
-                Container(
+                SizedBox(
                   height: 55,
                   width: double.infinity,
                   child: ElevatedButton(
@@ -133,15 +134,15 @@ class _LoginFormState extends State<LoginForm> {
                                 email, password, fullname, context);
                       }
                     },
-                    child: Text(login ? 'Login' : 'Register'),
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Mytheme.darkbluishcolor,
-                        textStyle: TextStyle(fontSize: 20),
+                        textStyle: const TextStyle(fontSize: 20),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(100))),
+                    child: Text(login ? 'Login' : 'Register'),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 TextButton(
@@ -154,7 +155,7 @@ class _LoginFormState extends State<LoginForm> {
                         login
                             ? "Don't have an account? Signup"
                             : "Already have an account? Login",
-                        style: TextStyle(color: Colors.deepPurple)))
+                        style: const TextStyle(color: Colors.deepPurple)))
               ],
             ),
           ),

@@ -3,9 +3,6 @@ import 'dart:convert';
 import 'package:codehub/pages/roadmap/roadmapinfo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:get/get_utils/get_utils.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import '../../courses/roadmap1.dart';
@@ -20,6 +17,7 @@ class Roadmapsu extends StatefulWidget {
 }
 
 class _RoadmapsuState extends State<Roadmapsu> {
+  @override
   void initState() {
     super.initState();
     loaddate();
@@ -38,7 +36,7 @@ class _RoadmapsuState extends State<Roadmapsu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: MyDrawer(),
+        drawer: const MyDrawer(),
         appBar: AppBar(
           backgroundColor: Mytheme.creamcolor,
         ),
@@ -50,9 +48,9 @@ class _RoadmapsuState extends State<Roadmapsu> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                header(),
-                if (Roadmapdata.maps2 != null && Roadmapdata.maps2.isNotEmpty)
-                  roadmapbilder().expand()
+                const header(),
+                if (Roadmapdata.maps2.isNotEmpty)
+                  const roadmapbilder().expand()
                 else
                   Center(
                     child: const CircularProgressIndicator().py16(),
@@ -95,7 +93,7 @@ class roadmapbilder extends StatelessWidget {
 class RoadItem extends StatelessWidget {
   final Roadmapitems info;
 
-  const RoadItem({super.key, required this.info}) : assert(info != null);
+  const RoadItem({super.key, required this.info});
 
   @override
   Widget build(BuildContext context) {
@@ -120,6 +118,8 @@ class RoadItem extends StatelessWidget {
 }
 
 class header extends StatelessWidget {
+  const header({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(

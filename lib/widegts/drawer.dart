@@ -1,13 +1,14 @@
-import 'dart:io';
 
 import 'package:codehub/widegts/theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyDrawer extends StatelessWidget {
+  const MyDrawer({super.key});
+
   @override
   Widget build(BuildContext context) {
-    final imageUrl = "assets/images/profile.png";
+    const imageUrl = "assets/images/profile.png";
 
     return SafeArea(
       child: Drawer(
@@ -27,7 +28,7 @@ class MyDrawer extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              CircleAvatar(
+              const CircleAvatar(
                 radius: 70,
                 backgroundImage: AssetImage(imageUrl),
               ),

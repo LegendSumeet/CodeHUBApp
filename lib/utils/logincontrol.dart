@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class logincontrol extends GetxController {
-  var _logincontrol = GoogleSignIn();
+  final _logincontrol = GoogleSignIn();
   var googleaccount = Rx<GoogleSignInAccount?>(null);
 
   login() async {

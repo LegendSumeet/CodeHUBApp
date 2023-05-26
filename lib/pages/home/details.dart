@@ -21,11 +21,11 @@ class MyWidget extends StatelessWidget {
         children: [
           ElevatedButton(
             onPressed: () {},
-            child: "Start".text.make(),
             style: ButtonStyle(
                 backgroundColor:
                     MaterialStateProperty.all(Mytheme.darkbluishcolor),
-                shape: MaterialStateProperty.all(StadiumBorder())),
+                shape: MaterialStateProperty.all(const StadiumBorder())),
+            child: "Start".text.make(),
           ).w40(context),
         ],
       ).p16(),
@@ -37,7 +37,7 @@ class MyWidget extends StatelessWidget {
             Expanded(
               child: VxArc(
                 height: 30.0,
-                edge: VxEdge.TOP,
+                edge: VxEdge.top,
                 child: Container(
                     color: Colors.white,
                     width: context.screenWidth,

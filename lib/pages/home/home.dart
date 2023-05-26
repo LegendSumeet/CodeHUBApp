@@ -37,7 +37,7 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: appbar(),
-        drawer: MyDrawer(),
+        drawer: const MyDrawer(),
         backgroundColor: Mytheme.creamcolor,
         body: SafeArea(
           child: Container(
@@ -45,9 +45,9 @@ class _HomepageState extends State<Homepage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                header(),
-                if (Coures.itemsco != null && Coures.itemsco.isNotEmpty)
-                  CouresList().expand()
+                const header(),
+                if (Coures.itemsco.isNotEmpty)
+                  const CouresList().expand()
                 else
                   Center(
                     child: const CircularProgressIndicator().py16(),
@@ -66,13 +66,15 @@ class _HomepageState extends State<Homepage> {
             onPressed: () {
               FirebaseAuth.instance.signOut();
             },
-            icon: Icon(Icons.logout))
+            icon: const Icon(Icons.logout))
       ],
     );
   }
 }
 
 class header extends StatelessWidget {
+  const header({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -111,7 +113,7 @@ class CouresList extends StatelessWidget {
 class CouresItem extends StatelessWidget {
   final Info info;
 
-  const CouresItem({super.key, required this.info}) : assert(info != null);
+  const CouresItem({super.key, required this.info});
 
   @override
   Widget build(BuildContext context) {
@@ -129,11 +131,11 @@ class CouresItem extends StatelessWidget {
               children: [
                 ElevatedButton(
                   onPressed: () {},
-                  child: "Start".text.make(),
                   style: ButtonStyle(
                       backgroundColor:
                           MaterialStateProperty.all(Mytheme.darkbluishcolor),
-                      shape: MaterialStateProperty.all(StadiumBorder())),
+                      shape: MaterialStateProperty.all(const StadiumBorder())),
+                  child: "Start".text.make(),
                 ),
               ],
             )
